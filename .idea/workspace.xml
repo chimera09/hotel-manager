@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9aa68679-6640-46cb-bedb-34da014ac53b" name="Default Changelist" comment="" />
+    <list default="true" id="9aa68679-6640-46cb-bedb-34da014ac53b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Users/Hotel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersDB.json" beforeDir="false" afterPath="$PROJECT_DIR$/UsersDB.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/FXML/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/FXML/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/Hotel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/PassHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/PassHashing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UsersDB.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UsersDB.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/GUI/Controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/GUI/Controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/GUI/FXML/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/GUI/FXML/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/GUI/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/GUI/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/database/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/database/User.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +35,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -26,6 +48,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1btvX4KwvOXNN2qex60KM41VXyR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -33,6 +56,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -72,10 +97,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="429" y="109" key="#Project_Structure" timestamp="1589468446991">
+    <state x="429" y="109" key="#Project_Structure" timestamp="1589542772518">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state x="429" y="109" key="#Project_Structure/0.0.1676.902@0.0.1676.902" timestamp="1589468446991" />
+    <state x="429" y="109" key="#Project_Structure/0.0.1676.902@0.0.1676.902" timestamp="1589542772518" />
     <state x="291" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589466731143">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
@@ -84,42 +109,46 @@
       <screen x="0" y="0" width="1676" height="902" />
     </state>
     <state x="481" y="138" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1676.902@0.0.1676.902" timestamp="1589465545054" />
-    <state x="642" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1589465925315">
+    <state x="642" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1589539861359">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state x="642" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1676.902@0.0.1676.902" timestamp="1589465925315" />
-    <state width="1632" height="226" key="GridCell.Tab.0.bottom" timestamp="1589472709784">
+    <state x="642" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1676.902@0.0.1676.902" timestamp="1589539861359" />
+    <state x="617" y="205" key="FileChooserDialogImpl" timestamp="1589479625653">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="226" key="GridCell.Tab.0.bottom/0.0.1676.902@0.0.1676.902" timestamp="1589472709784" />
-    <state width="1632" height="226" key="GridCell.Tab.0.center" timestamp="1589472709783">
+    <state x="617" y="205" key="FileChooserDialogImpl/0.0.1676.902@0.0.1676.902" timestamp="1589479625653" />
+    <state width="1632" height="226" key="GridCell.Tab.0.bottom" timestamp="1589541541400">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="226" key="GridCell.Tab.0.center/0.0.1676.902@0.0.1676.902" timestamp="1589472709783" />
-    <state width="1632" height="226" key="GridCell.Tab.0.left" timestamp="1589472709783">
+    <state width="1632" height="226" key="GridCell.Tab.0.bottom/0.0.1676.902@0.0.1676.902" timestamp="1589541541400" />
+    <state width="1632" height="226" key="GridCell.Tab.0.center" timestamp="1589541541400">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="226" key="GridCell.Tab.0.left/0.0.1676.902@0.0.1676.902" timestamp="1589472709783" />
-    <state width="1632" height="226" key="GridCell.Tab.0.right" timestamp="1589472709784">
+    <state width="1632" height="226" key="GridCell.Tab.0.center/0.0.1676.902@0.0.1676.902" timestamp="1589541541400" />
+    <state width="1632" height="226" key="GridCell.Tab.0.left" timestamp="1589541541400">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="226" key="GridCell.Tab.0.right/0.0.1676.902@0.0.1676.902" timestamp="1589472709784" />
-    <state width="1632" height="292" key="GridCell.Tab.1.bottom" timestamp="1589466732877">
+    <state width="1632" height="226" key="GridCell.Tab.0.left/0.0.1676.902@0.0.1676.902" timestamp="1589541541400" />
+    <state width="1632" height="226" key="GridCell.Tab.0.right" timestamp="1589541541400">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="292" key="GridCell.Tab.1.bottom/0.0.1676.902@0.0.1676.902" timestamp="1589466732877" />
-    <state width="1632" height="292" key="GridCell.Tab.1.center" timestamp="1589466732877">
+    <state width="1632" height="226" key="GridCell.Tab.0.right/0.0.1676.902@0.0.1676.902" timestamp="1589541541400" />
+    <state width="1632" height="292" key="GridCell.Tab.1.bottom" timestamp="1589480710558">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="292" key="GridCell.Tab.1.center/0.0.1676.902@0.0.1676.902" timestamp="1589466732877" />
-    <state width="1632" height="292" key="GridCell.Tab.1.left" timestamp="1589466732877">
+    <state width="1632" height="292" key="GridCell.Tab.1.bottom/0.0.1676.902@0.0.1676.902" timestamp="1589480710558" />
+    <state width="1632" height="292" key="GridCell.Tab.1.center" timestamp="1589480710558">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="292" key="GridCell.Tab.1.left/0.0.1676.902@0.0.1676.902" timestamp="1589466732877" />
-    <state width="1632" height="292" key="GridCell.Tab.1.right" timestamp="1589466732877">
+    <state width="1632" height="292" key="GridCell.Tab.1.center/0.0.1676.902@0.0.1676.902" timestamp="1589480710558" />
+    <state width="1632" height="292" key="GridCell.Tab.1.left" timestamp="1589480710558">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state width="1632" height="292" key="GridCell.Tab.1.right/0.0.1676.902@0.0.1676.902" timestamp="1589466732877" />
+    <state width="1632" height="292" key="GridCell.Tab.1.left/0.0.1676.902@0.0.1676.902" timestamp="1589480710558" />
+    <state width="1632" height="292" key="GridCell.Tab.1.right" timestamp="1589480710558">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1632" height="292" key="GridCell.Tab.1.right/0.0.1676.902@0.0.1676.902" timestamp="1589480710558" />
     <state x="317" y="25" key="SettingsEditor" timestamp="1589466170084">
       <screen x="0" y="0" width="1676" height="902" />
     </state>

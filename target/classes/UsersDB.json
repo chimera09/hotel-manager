@@ -1,1 +1,1 @@
-{"users":{"Dorel":{"mode":"client","password":"pass"},"Maria":{"mode":"client","password":"1234"}}, "hotels": {}}
+{"hotels":{},"users":{"Maria":{"mode":"client","password":"1234","address":"Arad, str. Lucian Blaga, nr.52","email":"maria@gmail.com"}}}

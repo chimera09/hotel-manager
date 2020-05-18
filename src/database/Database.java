@@ -1,5 +1,6 @@
 package src.database;
 
+import com.sun.org.apache.bcel.internal.generic.JsrInstruction;
 import org.json.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -89,11 +90,18 @@ public class Database {
         return true;
     }
 
-    private static JSONObject getHotelData(String name) {
+    public static JSONObject getHotelData(String name) {
         JSONObject userEntry = (JSONObject) ((JSONObject) db.get("hotels")).get(name);
         if (userEntry == null)
             return null;
         return userEntry;
+    }
+
+    public static JSONObject getHotels() {
+        JSONObject hotels = (JSONObject) db.get("hotels");
+        if (hotels == null)
+            return null;
+        return hotels;
     }
 
     public static Boolean hotelExists(String name) {

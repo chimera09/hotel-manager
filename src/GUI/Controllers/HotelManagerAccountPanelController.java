@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import src.Exceptions.NoHotelsAddedException;
 import src.Users.HotelManager;
@@ -14,23 +15,23 @@ import src.Users.Moderator;
 import src.Users.User;
 import src.database.Database;
 
-import javax.xml.soap.Text;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HotelManagerAccountPanelController extends Application {
-    User user;
-
+    HotelManager user;
+    public Text errMessage;
 
     private Stage stage;
 
     public void handleAddHotelButton(){
         try{
-                Parent root = FXMLLoader.load(getClass().getResource("../FXML/AddHotel.fxml"));
-                Scene scene = new Scene(root, 600, 400);
-                stage.setScene(scene);
+            Stage stage = (Stage) errMessage.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("../FXML/AddHotelPanel.fxml"));
+            Scene scene = new Scene(root, 600, 400);
+            stage.setScene(scene);
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -53,7 +54,7 @@ public class HotelManagerAccountPanelController extends Application {
     }
 
     public void initialize() {
-        user = Moderator.user;
+        user = (HotelManager) Moderator.user;
     }
 
     @Override

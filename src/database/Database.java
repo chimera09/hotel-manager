@@ -1,14 +1,19 @@
+
 package src.database;
 
 import org.json.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import src.Users.Hotel;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Database {
     private static JSONObject db;
@@ -53,6 +58,7 @@ public class Database {
             return null;
         return (String) userData.get("password");
     }
+
 
     public static String getUserMode(String user) {
         JSONObject userData = getUserData(user);
@@ -115,6 +121,20 @@ public class Database {
         ((JSONObject) db.get("hotels")).put(name, hotelData);
         return true;
     }
+
+    public static List<Hotel> getHotelsForOwner(String owner){
+        List<Hotel> hotelOfOwner = new ArrayList<>();
+        JSONObject hotelsDb = (JSONObject) db.get("hotels");
+
+        for (Object key : hotelsDb.keySet()) {
+            String name = (String) key;
+            JSONObject hotelEntry = getHotelData(name);
+            Hotel hotel = new Hotel(name, hotelEntry);
+            hotelOfOwner.add(hotel);
+        }
+        return  hotelOfOwner;
+    }
+
 
     public static void saveDatabase() {
         try {

@@ -1,5 +1,6 @@
 package src.Users;
 
+import src.Exceptions.NoHotelsAddedException;
 import src.Exceptions.PasswordIncorrectException;
 import src.Exceptions.UserAlreadyExistsException;
 import src.Exceptions.UserNotFoundException;
@@ -15,7 +16,9 @@ public abstract class User {
     public User(String name) {
         this.name = name;
         this.mode = Database.getUserMode(name);
-        this.mode = Database.getUserPassword(name);
+        this.password = Database.getUserPassword(name);
+        this.address =Database.getUserAddress(name);
+        this.email = Database.getUserMail(name);
     }
 
     public User(String name, String mode, String password, String email, String address) {
@@ -39,12 +42,21 @@ public abstract class User {
     }
 
     public static User createUser(String name, String password, String mode, String address, String email) throws UserAlreadyExistsException {
-        if (!Database.userExists(name))
+        if (Database.userExists(name))
             throw new UserAlreadyExistsException("User "+name+" already exists!");
         if (mode.equals("client"))
             return new Customer(name, password, mode, address, email);
         else
             return new HotelManager(name, password, mode, address, email);
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getAddress() {
+        return address;
     }
 
     public String getName() {
@@ -59,5 +71,6 @@ public abstract class User {
         return password;
     }
 
+    public abstract void checkList() throws NoHotelsAddedException;
 }
 

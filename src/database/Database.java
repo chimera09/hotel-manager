@@ -61,6 +61,21 @@ public class Database {
         return (String) userData.get("mode");
     }
 
+    public static String getUserMail(String user) {
+        JSONObject userData = getUserData(user);
+        if (userData == null)
+            return null;
+        return (String) userData.get("email");
+    }
+
+    public static String getUserAddress(String user) {
+        JSONObject userData = getUserData(user);
+        if (userData == null)
+            return null;
+        return (String) userData.get("address");
+    }
+
+
     public static boolean insertUser(String user, String password, String mode, String email, String address) {
         if (userExists(user))
             return false;
@@ -87,11 +102,13 @@ public class Database {
         return true;
     }
 
-    public static boolean insertHotel(String name, String owner, int totalRooms) {
+    public static boolean insertHotel(String name, String owner,String description,String facilities, int totalRooms) {
         if (hotelExists(name))
             return false;
         JSONObject hotelData = new JSONObject();
         hotelData.put("owner", owner);
+        hotelData.put("description",description);
+        hotelData.put("facilities",facilities);
         hotelData.put("total_rooms", totalRooms);
         hotelData.put("occupied_rooms", 0);
 

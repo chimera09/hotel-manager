@@ -9,11 +9,16 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import src.Users.Customer;
+import src.Users.HotelManager;
+import src.Users.Moderator;
 import src.Users.User;
 import src.database.PassHashing;
 import src.Exceptions.*;
 
+import javax.jws.WebParam;
 import java.io.IOException;
+
 
 public class LoginController extends Application {
 
@@ -23,6 +28,7 @@ public class LoginController extends Application {
     public PasswordField passwordField;
     @FXML
     public TextField usernameField;
+
 
     @FXML
     public void handleLoginButtonAction() {
@@ -41,13 +47,30 @@ public class LoginController extends Application {
             }
             try{
                 User user = User.getUser(username,password);
-                try {
-                    Stage stage = (Stage) loginMessage.getScene().getWindow();
-                    Parent viewStudentsRoot = FXMLLoader.load(getClass().getResource("../FXML/CustomerPanel.fxml"));
-                    Scene scene = new Scene(viewStudentsRoot, 600, 400);
-                    stage.setScene(scene);
-                } catch (IOException e) {
-                    e.printStackTrace();
+                Moderator.user = user;
+                //Moderator.stage = (Stage) loginMessage.getScene().getWindow();
+                if(user instanceof Customer) {
+                   /* try {
+                        Stage stage = (Stage) loginMessage.getScene().getWindow();
+                        FXMLLoader loader  = new FXMLLoader((getClass().getResource("../FXML/CustomerPanel.fxml")));
+                        Parent root = loader.load();
+                        HotelManagerAccountPanelController second = loader.getController();
+                        second.getUser(user);
+                        Scene scene = new Scene(root, 600, 400);
+                        stage.setScene(scene);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }*/
+                }
+                if(user instanceof HotelManager){
+                    try {
+                        Stage stage = (Stage) loginMessage.getScene().getWindow();
+                        Parent root = FXMLLoader.load(getClass().getResource("../FXML/HotelManagerAccountPanel.fxml"));
+                        Scene scene = new Scene(root, 600, 400);
+                        stage.setScene(scene);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             } catch (UserNotFoundException e){
                 loginMessage.setText("User not found.Please try again");
@@ -64,8 +87,8 @@ public class LoginController extends Application {
     public void handleRegisterButtonAction(){
         try {
             Stage stage = (Stage) loginMessage.getScene().getWindow();
-            Parent viewStudentsRoot = FXMLLoader.load(getClass().getResource("../FXML/Register.fxml"));
-            Scene scene = new Scene(viewStudentsRoot, 600, 400);
+            Parent root = FXMLLoader.load(getClass().getResource("../FXML/Register.fxml"));
+            Scene scene = new Scene(root, 600, 400);
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();

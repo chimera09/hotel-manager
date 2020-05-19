@@ -95,7 +95,7 @@ public class Database {
         return true;
     }
 
-    public static JSONObject getHotelData(String name) {
+    private static JSONObject getHotelData(String name) {
         JSONObject hotelEntry = (JSONObject) ((JSONObject) db.get("hotels")).get(name);
         if (hotelEntry == null)
             return null;

@@ -11,6 +11,12 @@ import src.Exceptions.NoHotelsAddedException;
 import src.Users.HotelManager;
 import src.Users.Moderator;
 import src.Users.User;
+import src.database.Database;
+import java.awt.*;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 
 import java.io.IOException;
 

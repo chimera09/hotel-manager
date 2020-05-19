@@ -1,16 +1,26 @@
 package src.GUI.Controllers;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.Event;
+import javafx.event.EventType;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.ComboBoxListCell;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.PickResult;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
 import src.Users.HotelManager;
 import src.Users.Moderator;
+import src.database.Database;
+import javafx.event.EventHandler;
 
-//import javafx.scene.input.MouseEvent;
 
 
 public class MyHotelPanelController extends Application {

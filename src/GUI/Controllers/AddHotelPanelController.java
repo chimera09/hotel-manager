@@ -41,13 +41,15 @@ public class AddHotelPanelController extends Application {
             submitMessage.setText("Please fill all the informations");
             return;
         }
-        int no_rooms = parseInt(rooms);
+      
+        int no_rooms = Integer.parseInt(rooms);
         Hotel hotel = new Hotel(name,user.getName(),descr,facilities,no_rooms);
 
         if(name != null || !name.isEmpty()){
             try{
                 user.addHotel(hotel);
                 Stage stage = new Stage();
+
                 stage.initOwner(addHotelButton.getScene().getWindow());
                 MyHotelPanelController mhpn = new MyHotelPanelController();
                 mhpn.start(stage);

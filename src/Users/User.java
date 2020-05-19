@@ -6,6 +6,8 @@ import src.Exceptions.UserAlreadyExistsException;
 import src.Exceptions.UserNotFoundException;
 import src.database.Database;
 
+import java.util.Objects;
+
 public abstract class User {
     protected String name;
     protected String mode;
@@ -50,6 +52,22 @@ public abstract class User {
             return new HotelManager(name, password, mode, address, email);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return Objects.equals(getName(), user.getName()) &&
+                Objects.equals(getMode(), user.getMode()) &&
+                Objects.equals(getPassword(), user.getPassword()) &&
+                Objects.equals(getEmail(), user.getEmail()) &&
+                Objects.equals(getAddress(), user.getAddress());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getMode(), getPassword(), getEmail(), getAddress());
+    }
 
     public String getEmail() {
         return email;

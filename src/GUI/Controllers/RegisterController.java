@@ -52,6 +52,10 @@ public class RegisterController extends Application {
             }
             try{
                 User user = User.createUser(username,password,mode,address,mail);
+                Stage stage = (Stage) submitMessage.getScene().getWindow();
+                Parent root = FXMLLoader.load(getClass().getResource("../FXML/HotelManagerAccountPanel.fxml"));
+                Scene scene = new Scene(root, 600, 400);
+                stage.setScene(scene);
                 if(user instanceof Customer) {
                     try {
                         Stage stage = (Stage) submitButton.getScene().getWindow();
@@ -75,6 +79,7 @@ public class RegisterController extends Application {
                     }
                 }
             }catch (UserAlreadyExistsException e){
+
                 submitMessage.setText("User " + username +" already exits" );
             }
         }

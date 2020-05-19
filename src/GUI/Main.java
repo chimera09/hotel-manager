@@ -36,6 +36,6 @@ public class Main extends Application {
         //Database.saveDatabase();
         //System.out.println(Database.getUserPassword("Maria"));
         //Database.insertHotel("Iris", "Dorel", 150);
-        //Database.saveDatabase();
+        Database.saveDatabase();
     }
 }

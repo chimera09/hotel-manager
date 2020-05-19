@@ -44,9 +44,15 @@ public class AddHotelPanelController extends Application {
         if(name != null || !name.isEmpty()){
             try{
                 user.addHotel(hotel);
+                Stage stage = new Stage();
+                stage.initOwner(submitMessage.getScene().getWindow());
+                MyHotelPanelController mhpn = new MyHotelPanelController();
+                mhpn.start(stage);
             }
             catch(HotelAlreadyExistsException e){
                 submitMessage.setText("Hotel already exists");
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
         else{

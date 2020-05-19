@@ -13,6 +13,8 @@ import src.Users.User;
 import src.database.PassHashing;
 import src.Exceptions.*;
 
+import java.io.IOException;
+
 public class RegisterController extends Application {
     @FXML
     public TextField usernameField;
@@ -45,7 +47,11 @@ public class RegisterController extends Application {
             }
             try{
                 User user = User.createUser(username,password,mode,address,mail);
-            }catch (UserAlreadyExistsException e){
+                Stage stage = (Stage) submitMessage.getScene().getWindow();
+                Parent root = FXMLLoader.load(getClass().getResource("../FXML/HotelManagerAccountPanel.fxml"));
+                Scene scene = new Scene(root, 600, 400);
+                stage.setScene(scene);
+            }catch (UserAlreadyExistsException | IOException e){
                 submitMessage.setText("User " + username +" already exits" );
             }
         }

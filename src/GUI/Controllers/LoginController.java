@@ -50,22 +50,21 @@ public class LoginController extends Application {
                 Moderator.user = user;
                 //Moderator.stage = (Stage) loginMessage.getScene().getWindow();
                 if(user instanceof Customer) {
-                   /* try {
+                   try {
                         Stage stage = (Stage) loginMessage.getScene().getWindow();
                         FXMLLoader loader  = new FXMLLoader((getClass().getResource("../FXML/CustomerPanel.fxml")));
                         Parent root = loader.load();
-                        HotelManagerAccountPanelController second = loader.getController();
-                        second.getUser(user);
                         Scene scene = new Scene(root, 600, 400);
                         stage.setScene(scene);
                     } catch (IOException e) {
                         e.printStackTrace();
-                    }*/
+                    }
                 }
                 if(user instanceof HotelManager){
                     try {
                         Stage stage = (Stage) loginMessage.getScene().getWindow();
-                        Parent root = FXMLLoader.load(getClass().getResource("../FXML/HotelManagerAccountPanel.fxml"));
+                        FXMLLoader loader = new FXMLLoader((getClass().getResource("../FXML/HotelManagerAccountPanel.fxml")));
+                        Parent root =loader.load();
                         Scene scene = new Scene(root, 600, 400);
                         stage.setScene(scene);
                     } catch (IOException e) {

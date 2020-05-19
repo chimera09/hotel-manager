@@ -14,40 +14,49 @@ import src.Users.HotelManager;
 import src.Users.Moderator;
 import src.Users.User;
 import src.database.Database;
-
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.control.Button;
 
 public class HotelManagerAccountPanelController extends Application {
+    @FXML
+    private Button showHotelsBtn;
+
     HotelManager user;
+    @FXML
     public Text errMessage;
 
     private Stage stage;
 
+    public void setUser(User user){
+        this.user  = (HotelManager)user;
+    }
+
     public void handleAddHotelButton(){
         try{
-            Stage stage = (Stage) errMessage.getScene().getWindow();
+            Stage stage = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("../FXML/AddHotelPanel.fxml"));
             Scene scene = new Scene(root, 600, 400);
+            stage.initOwner(errMessage.getScene().getWindow());
             stage.setScene(scene);
+            stage.showAndWait();
         }catch(IOException e){
             e.printStackTrace();
         }
     }
     public void handleMyHotelsButton(){
         try{
-            user.checkList();
+            //user.checkList();
+            Stage stage = new Stage();
+            stage.initOwner(errMessage.getScene().getWindow());
+            MyHotelPanelController mhpn = new MyHotelPanelController();
+            mhpn.start(stage);
         }
-        catch (NoHotelsAddedException e){
-            //errMessage.setTextContent("No hotels added");
-        };
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("../FXML/MyHotels.fxml"));
-            Scene scene = new Scene(root, 600, 400);
-            stage.setScene(scene);
-        }catch(IOException e){
+        catch (NoHotelsAddedException | IOException e){
+            errMessage.setText("No hotels added");
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

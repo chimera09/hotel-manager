@@ -96,10 +96,10 @@ public class Database {
     }
 
     private static JSONObject getHotelData(String name) {
-        JSONObject userEntry = (JSONObject) ((JSONObject) db.get("hotels")).get(name);
-        if (userEntry == null)
+        JSONObject hotelEntry = (JSONObject) ((JSONObject) db.get("hotels")).get(name);
+        if (hotelEntry == null)
             return null;
-        return userEntry;
+        return hotelEntry;
     }
 
     public static Boolean hotelExists(String name) {
@@ -130,7 +130,8 @@ public class Database {
             String name = (String) key;
             JSONObject hotelEntry = getHotelData(name);
             Hotel hotel = new Hotel(name, hotelEntry);
-            hotelOfOwner.add(hotel);
+            if (hotel.getOwner().equals(owner))
+                hotelOfOwner.add(hotel);
         }
         return  hotelOfOwner;
     }

@@ -8,9 +8,9 @@ public class Hotel {
     String owner;
     String description;
     String facilities;
-    int totalRooms;
-    int bookedRooms;
-    int availbleRooms;
+    long totalRooms;
+    long bookedRooms;
+    long availbleRooms;
 
     public Hotel(String name, String owner,String description ,String facilities , int totalRooms){
         this.name = name;
@@ -24,11 +24,20 @@ public class Hotel {
     }
 
     public Hotel(String name, JSONObject hotelEntry) {
+        this.name = name;
         this.owner = (String) hotelEntry.get("owner");
         this.description = (String) hotelEntry.get("description");
         this.facilities = (String) hotelEntry.get("facilities");
-        this.totalRooms = (int) hotelEntry.get("total_rooms");
-        this.bookedRooms = (int) hotelEntry.get("occupied_rooms");
+        this.totalRooms = (long) hotelEntry.get("total_rooms");
+        this.bookedRooms = (long) hotelEntry.get("occupied_rooms");
         this.availbleRooms = totalRooms - bookedRooms;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public String getOwner() { return owner;}
+    public String getDescription() {
+        return description;
     }
 }

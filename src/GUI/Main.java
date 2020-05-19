@@ -25,10 +25,15 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         Database.setUp();
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            public void run() {
+                Database.saveDatabase();
+            }
+        }));
         launch(args);
 
        //Database.insertUser("Mariaaaaaa", "1234", "client", "maria@gmail.com", "Arad, str. Lucian Blaga, nr.52");
-        Database.saveDatabase();
+        //Database.saveDatabase();
         //System.out.println(Database.getUserPassword("Maria"));
         //Database.insertHotel("Iris", "Dorel", 150);
         //Database.saveDatabase();

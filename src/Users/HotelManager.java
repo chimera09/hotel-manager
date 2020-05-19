@@ -25,6 +25,11 @@ public class HotelManager extends User{
             myHotels.add(hotel);
         }
     }
+
+    public List<Hotel> getMyHotels() {
+        return myHotels;
+    }
+
     public void checkList() throws NoHotelsAddedException {
         if(myHotels.isEmpty()){
             throw new NoHotelsAddedException("No hotels added");

@@ -1,15 +1,19 @@
+
 package src.database;
 
-import com.sun.org.apache.bcel.internal.generic.JsrInstruction;
 import org.json.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import src.Users.Hotel;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Database {
     private static JSONObject db;
@@ -55,6 +59,7 @@ public class Database {
         return (String) userData.get("password");
     }
 
+
     public static String getUserMode(String user) {
         JSONObject userData = getUserData(user);
         if (userData == null)
@@ -91,17 +96,23 @@ public class Database {
     }
 
     public static JSONObject getHotelData(String name) {
-        JSONObject userEntry = (JSONObject) ((JSONObject) db.get("hotels")).get(name);
-        if (userEntry == null)
+        JSONObject hotelEntry = (JSONObject) ((JSONObject) db.get("hotels")).get(name);
+        if (hotelEntry == null)
             return null;
-        return userEntry;
+        return hotelEntry;
     }
 
-    public static JSONObject getHotels() {
-        JSONObject hotels = (JSONObject) db.get("hotels");
-        if (hotels == null)
-            return null;
-        return hotels;
+    public static List<Hotel> getHotels(){
+        List<Hotel> hotels = new ArrayList<>();
+        JSONObject hotelsDb = (JSONObject) db.get("hotels");
+
+        for (Object key : hotelsDb.keySet()) {
+            String name = (String) key;
+            JSONObject hotelEntry = getHotelData(name);
+            Hotel hotel = new Hotel(name, hotelEntry);
+                hotels.add(hotel);
+        }
+        return  hotels;
     }
 
     public static Boolean hotelExists(String name) {
@@ -123,6 +134,21 @@ public class Database {
         ((JSONObject) db.get("hotels")).put(name, hotelData);
         return true;
     }
+
+    public static List<Hotel> getHotelsForOwner(String owner){
+        List<Hotel> hotelOfOwner = new ArrayList<>();
+        JSONObject hotelsDb = (JSONObject) db.get("hotels");
+
+        for (Object key : hotelsDb.keySet()) {
+            String name = (String) key;
+            JSONObject hotelEntry = getHotelData(name);
+            Hotel hotel = new Hotel(name, hotelEntry);
+            if (hotel.getOwner().equals(owner))
+                hotelOfOwner.add(hotel);
+        }
+        return  hotelOfOwner;
+    }
+
 
     public static void saveDatabase() {
         try {

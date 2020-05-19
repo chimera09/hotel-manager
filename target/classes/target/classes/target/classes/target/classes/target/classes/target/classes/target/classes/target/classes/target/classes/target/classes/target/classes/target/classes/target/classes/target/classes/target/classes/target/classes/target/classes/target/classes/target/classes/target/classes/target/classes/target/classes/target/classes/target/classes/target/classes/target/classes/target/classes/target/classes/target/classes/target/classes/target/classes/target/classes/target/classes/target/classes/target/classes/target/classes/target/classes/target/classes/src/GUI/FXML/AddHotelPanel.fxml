@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.GUI.Controllers.AddHotelPanelController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="209.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Hotel" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="nameField" prefHeight="31.0" prefWidth="460.0" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="150.0" right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text layoutX="50.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" GridPane.rowIndex="2">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="descriptionField" layoutX="160.0" layoutY="79.0" prefHeight="31.0" prefWidth="460.0" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="150.0" right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text layoutX="30.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facilities :" GridPane.rowIndex="3">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="facilitiesField" layoutX="160.0" layoutY="123.0" prefHeight="31.0" prefWidth="460.0" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="150.0" right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text layoutX="30.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rooms :" GridPane.rowIndex="4">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="roomsField" layoutX="160.0" layoutY="261.0" prefHeight="31.0" prefWidth="460.0" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="150.0" right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text fx:id="submitMessage" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="311.826171875" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets top="30.0" />
+         </GridPane.margin>
+      </Text>
+      <Button fx:id="addHotelButton" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="39.0" text="Add Hotel" prefWidth="83.0" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets left="395.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>

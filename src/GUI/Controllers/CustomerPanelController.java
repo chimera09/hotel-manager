@@ -3,19 +3,24 @@ package src.GUI.Controllers;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
-import jdk.nashorn.internal.parser.JSONParser;
 import org.json.simple.JSONObject;
+import src.Users.Customer;
+import src.Users.Hotel;
+import src.Users.HotelManager;
+import src.Users.Moderator;
 import src.database.Database;
 
-import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,16 +29,34 @@ public class CustomerPanelController extends Application {
     @FXML
     public ListView<HBoxCell> listView;
 
-    static class ButtonEventHandler implements EventHandler {
-        public ButtonEventHandler(JSONObject hotel) {
-            this.hotel = hotel;
-        }
+    Customer user;
 
-        JSONObject hotel;
+    static class ButtonEventHandler implements EventHandler {
+        private String hotelName;
+        private Button buttonId;
+
+        public ButtonEventHandler(String hotelName, Button buttonId) {
+            this.hotelName = hotelName;
+            this.buttonId = buttonId;
+        }
 
         @Override
         public void handle(Event event) {
-            System.out.println(hotel.toString());
+            try {
+                Stage stage = new Stage();
+                stage.initOwner(buttonId.getScene().getWindow());
+                FXMLLoader loader  = new FXMLLoader((getClass().getResource("../FXML/HotelInfoPage.fxml")));
+                Parent root = loader.load();
+                HotelInfoPageController controller = loader.<HotelInfoPageController>getController();
+                controller.initialize(hotelName);
+                Scene scene = new Scene(root, 600, 400);
+                stage.setScene(scene);
+                controller.start(stage);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -41,7 +64,7 @@ public class CustomerPanelController extends Application {
         Label label = new Label();
         Button button = new Button();
 
-        HBoxCell(String labelText, JSONObject hotelData) {
+        HBoxCell(String labelText) {
             super();
 
             label.setText(labelText);
@@ -50,7 +73,7 @@ public class CustomerPanelController extends Application {
 
             button.setText("View");
 
-            button.setOnAction(new ButtonEventHandler(hotelData));
+            button.setOnAction(new ButtonEventHandler(labelText, button));
 
             this.getChildren().addAll(label, button);
         }
@@ -58,9 +81,11 @@ public class CustomerPanelController extends Application {
 
     public void setListView() {
         List<HBoxCell> list = new ArrayList<HBoxCell>();
-        JSONObject hotels = Database.getHotels();
-
-        hotels.keySet().forEach(key -> list.add(new HBoxCell((String) key, (JSONObject)hotels.get(key))));
+        String hotelName;
+        for (int i = 0; i < user.showHotels().size(); i++) {
+            hotelName = user.showHotels().get(i).getName();
+            list.add(new HBoxCell(hotelName));
+        }
 
         ObservableList<HBoxCell> myObservableList = FXCollections.observableArrayList(list);
 
@@ -69,6 +94,7 @@ public class CustomerPanelController extends Application {
 
     @FXML
     public void initialize() {
+        user = (Customer) Moderator.user;
         setListView();
     }
 

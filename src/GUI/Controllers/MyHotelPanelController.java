@@ -19,9 +19,8 @@ import javafx.stage.Stage;
 import src.Users.HotelManager;
 import src.Users.Moderator;
 import src.database.Database;
-
-//import javafx.scene.input.MouseEvent;
 import javafx.event.EventHandler;
+
 
 
 public class MyHotelPanelController extends Application {

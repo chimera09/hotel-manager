@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.GUI.Controllers.BookingController">
+   <children>
+      <AnchorPane prefHeight="69.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="248.0" layoutY="41.0" stroke="BLACK" strokeType="OUTSIDE" text="Book Date" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="240.0" prefWidth="300.0">
+         <children>
+            <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check-In">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="checkInDate" layoutX="51.0" layoutY="145.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="70.0" prefHeight="240.0" prefWidth="300.0">
+         <children>
+            <Text layoutX="100.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check-Out">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="checkOutDate" layoutX="51.0" layoutY="145.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="90.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="bookButton" layoutX="261.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleBookButton" text="Book">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Text fx:id="displayMessage" layoutX="154.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="293.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</FlowPane>

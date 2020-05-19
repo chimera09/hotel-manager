@@ -33,6 +33,10 @@ public class Hotel {
         this.availbleRooms = totalRooms - bookedRooms;
     }
 
+    public void setBookedRooms(JSONObject hotelEntry) {
+        hotelEntry.put("occupied_rooms", bookedRooms + 1);
+    }
+
     public String getName() {
         return name;
     }
@@ -40,4 +44,7 @@ public class Hotel {
     public String getDescription() {
         return description;
     }
+    public String getFacilities() { return facilities; }
+    public long getTotalRooms() { return totalRooms; }
+    public long getAvailableRooms() { return availbleRooms; }
 }

@@ -9,6 +9,7 @@ import src.Exceptions.HotelAlreadyExistsException;
 import src.Users.Hotel;
 import src.Users.HotelManager;
 import src.Users.Moderator;
+import javafx.scene.control.Button;
 import src.Users.User;
 
 import java.awt.*;
@@ -27,6 +28,8 @@ public class AddHotelPanelController extends Application {
     public TextField roomsField;
     @FXML
     public Text submitMessage;
+    @FXML
+    public Button addHotelButton;
 
 
     public void handleSubmitButtonAction() {
@@ -38,6 +41,7 @@ public class AddHotelPanelController extends Application {
             submitMessage.setText("Please fill all the informations");
             return;
         }
+      
         int no_rooms = Integer.parseInt(rooms);
         Hotel hotel = new Hotel(name,user.getName(),descr,facilities,no_rooms);
 
@@ -45,7 +49,8 @@ public class AddHotelPanelController extends Application {
             try{
                 user.addHotel(hotel);
                 Stage stage = new Stage();
-                stage.initOwner(submitMessage.getScene().getWindow());
+
+                stage.initOwner(addHotelButton.getScene().getWindow());
                 MyHotelPanelController mhpn = new MyHotelPanelController();
                 mhpn.start(stage);
             }

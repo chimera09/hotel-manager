@@ -102,6 +102,19 @@ public class Database {
         return hotelEntry;
     }
 
+    public static List<Hotel> getHotels(){
+        List<Hotel> hotels = new ArrayList<>();
+        JSONObject hotelsDb = (JSONObject) db.get("hotels");
+
+        for (Object key : hotelsDb.keySet()) {
+            String name = (String) key;
+            JSONObject hotelEntry = getHotelData(name);
+            Hotel hotel = new Hotel(name, hotelEntry);
+                hotels.add(hotel);
+        }
+        return  hotels;
+    }
+
     public static Boolean hotelExists(String name) {
         if(getHotelData(name) == null)
             return false;

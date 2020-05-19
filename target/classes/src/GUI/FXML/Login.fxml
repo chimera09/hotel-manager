@@ -46,7 +46,7 @@
                 <Font size="31.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#handleLoginButtonAction" text="Login" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLoginButtonAction" text="Login" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
             <GridPane.margin>
                 <Insets left="100.0" />
             </GridPane.margin>
@@ -62,7 +62,7 @@
                 <Font size="18.0" />
             </font>
         </PasswordField>
-        <Button layoutX="110.0" layoutY="320.0" mnemonicParsing="false" text="Register" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+        <Button fx:id="registerButton" layoutX="110.0" layoutY="320.0" mnemonicParsing="false" text="Register"  onAction="#handleRegisterButtonAction" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
             <font>
                 <Font size="20.0" />
             </font>

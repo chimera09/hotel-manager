@@ -1,6 +1,5 @@
 package src.Users;
 
-import jdk.nashorn.api.scripting.ScriptObjectMirror;
 import src.Exceptions.HotelAlreadyExistsException;
 import src.Exceptions.NoHotelsAddedException;
 import src.database.Database;

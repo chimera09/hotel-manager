@@ -5,10 +5,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import src.Users.Customer;
+import src.Users.HotelManager;
 import src.Users.User;
 import src.database.PassHashing;
 import src.Exceptions.*;
@@ -28,6 +31,8 @@ public class RegisterController extends Application {
     public TextField passwordField;
     @FXML
     public Text submitMessage;
+    @FXML
+    public Button submitButton;
 
     public void handleSubmitButtonAction(){
         String username = usernameField.getText();
@@ -51,7 +56,30 @@ public class RegisterController extends Application {
                 Parent root = FXMLLoader.load(getClass().getResource("../FXML/HotelManagerAccountPanel.fxml"));
                 Scene scene = new Scene(root, 600, 400);
                 stage.setScene(scene);
-            }catch (UserAlreadyExistsException | IOException e){
+                if(user instanceof Customer) {
+                    try {
+                        Stage stage = (Stage) submitButton.getScene().getWindow();
+                        FXMLLoader loader  = new FXMLLoader((getClass().getResource("../FXML/CustomerPanel.fxml")));
+                        Parent root = loader.load();
+                        Scene scene = new Scene(root, 600, 400);
+                        stage.setScene(scene);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if(user instanceof HotelManager){
+                    try {
+                        Stage stage = (Stage) submitButton.getScene().getWindow();
+                        FXMLLoader loader = new FXMLLoader((getClass().getResource("../FXML/HotelManagerAccountPanel.fxml")));
+                        Parent root =loader.load();
+                        Scene scene = new Scene(root, 600, 400);
+                        stage.setScene(scene);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }catch (UserAlreadyExistsException e){
+
                 submitMessage.setText("User " + username +" already exits" );
             }
         }

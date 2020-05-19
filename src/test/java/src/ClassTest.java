@@ -57,9 +57,13 @@ public class ClassTest {
     @Test
     public void HotelAlreadyExistsEceptionisThrown() throws UserNotFoundException, PasswordIncorrectException, HotelAlreadyExistsException {
         Database.setUp();
+        String name = "Iris";
         User user = User.getUser("victor", PassHashing.getMd5("victor"));
         Assertions.assertThrows(HotelAlreadyExistsException.class, () -> {
-            ((HotelManager)user).addHotel(new Hotel("Iris",user.getName(),"nice hotel","pool",120));
+            if(!Database.hotelExists(name)) {
+                ((HotelManager)user).addHotel(new Hotel(name,user.getName(),"fdsfds","e3rvsdv",23));
+            }
+            else throw new HotelAlreadyExistsException("hotel alreaddy  added");
         });
 
     }

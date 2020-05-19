@@ -17,12 +17,8 @@ public class HotelManager extends User{
         super(name, mode, password, email, address);
         myHotels = Database.getHotelsForOwner(name);
     }
-    public void addHotel(Hotel hotel) throws HotelAlreadyExistsException {
-        if(Database.hotelExists(hotel.getName()))
-            throw new HotelAlreadyExistsException("hotel already exists");
-        else{
+    public void addHotel(Hotel hotel) {
             myHotels.add(hotel);
-        }
     }
 
     public List<Hotel> getMyHotels() {

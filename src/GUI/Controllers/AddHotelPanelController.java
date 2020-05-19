@@ -11,6 +11,7 @@ import src.Users.HotelManager;
 import src.Users.Moderator;
 import javafx.scene.control.Button;
 import src.Users.User;
+import src.database.Database;
 
 import java.awt.*;
 
@@ -37,20 +38,22 @@ public class AddHotelPanelController extends Application {
         String descr = descriptionField.getText();
         String facilities = facilitiesField.getText();
         String rooms = roomsField.getText();
+
         if(descr.isEmpty() || facilities.isEmpty() || rooms.isEmpty() ){
             submitMessage.setText("Please fill all the informations");
             return;
         }
       
         int no_rooms = Integer.parseInt(rooms);
-        Hotel hotel = new Hotel(name,user.getName(),descr,facilities,no_rooms);
 
         if(name != null || !name.isEmpty()){
             try{
-                user.addHotel(hotel);
+                if(!Database.hotelExists(name)) {
+                    user.addHotel(new Hotel(name,user.getName(),descr,facilities,no_rooms));
+                }
+                else throw new HotelAlreadyExistsException("hotel alreaddy  added");
                 Stage stage = new Stage();
-
-                stage.initOwner(addHotelButton.getScene().getWindow());
+                stage.initOwner(submitMessage.getScene().getWindow());
                 MyHotelPanelController mhpn = new MyHotelPanelController();
                 mhpn.start(stage);
             }

@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aa68679-6640-46cb-bedb-34da014ac53b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_junit_jupiter_junit_jupiter_5_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Controllers/AddHotelPanelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Controllers/MyHotelPanelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/FXML/AddHotelPanel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersDB.json" beforeDir="false" afterPath="$PROJECT_DIR$/UsersDB.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Controllers/CustomerPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Controllers/CustomerPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Controllers/HotelManagerAccountPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Controllers/HotelManagerAccountPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Controllers/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/FXML/HotelManagerAccountPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/FXML/HotelManagerAccountPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/FXML/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/FXML/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/FXML/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/FXML/Register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/HotelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/HotelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users/Moderator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Moderator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/UsersDB.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UsersDB.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/src/GUI/Controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/GUI/Controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/src/GUI/FXML/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/GUI/FXML/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/src/GUI/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/GUI/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/src/Users/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/Users/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/src/Users/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/Users/Hotel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/src/Users/HotelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/Users/HotelManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/src/Users/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/Users/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/src/database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/database/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/src/GUI/FXML/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/src/GUI/FXML/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/GUI/FXML/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/GUI/FXML/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/GUI/FXML/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/GUI/FXML/Login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +19,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -142,26 +116,26 @@
       <screen x="0" y="0" width="1676" height="902" />
     </state>
     <state x="617" y="205" key="FileChooserDialogImpl/0.0.1676.902@0.0.1676.902" timestamp="1589479625653" />
-    <state width="1354" height="260" key="GridCell.Tab.0.bottom" timestamp="1589897386615">
+    <state width="1354" height="260" key="GridCell.Tab.0.bottom" timestamp="1589897532761">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1632" height="226" key="GridCell.Tab.0.bottom/0.0.1676.902@0.0.1676.902" timestamp="1589541541400" />
-    <state width="1354" height="260" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1589897386615" />
-    <state width="1354" height="260" key="GridCell.Tab.0.center" timestamp="1589897386612">
+    <state width="1354" height="260" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1589897532761" />
+    <state width="1354" height="260" key="GridCell.Tab.0.center" timestamp="1589897532760">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1632" height="226" key="GridCell.Tab.0.center/0.0.1676.902@0.0.1676.902" timestamp="1589541541400" />
-    <state width="1354" height="260" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1589897386612" />
-    <state width="1354" height="260" key="GridCell.Tab.0.left" timestamp="1589897386611">
+    <state width="1354" height="260" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1589897532760" />
+    <state width="1354" height="260" key="GridCell.Tab.0.left" timestamp="1589897532760">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1632" height="226" key="GridCell.Tab.0.left/0.0.1676.902@0.0.1676.902" timestamp="1589541541400" />
-    <state width="1354" height="260" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1589897386611" />
-    <state width="1354" height="260" key="GridCell.Tab.0.right" timestamp="1589897386613">
+    <state width="1354" height="260" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1589897532760" />
+    <state width="1354" height="260" key="GridCell.Tab.0.right" timestamp="1589897532761">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1632" height="226" key="GridCell.Tab.0.right/0.0.1676.902@0.0.1676.902" timestamp="1589541541400" />
-    <state width="1354" height="260" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1589897386613" />
+    <state width="1354" height="260" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1589897532761" />
     <state width="1632" height="292" key="GridCell.Tab.1.bottom" timestamp="1589480710558">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
